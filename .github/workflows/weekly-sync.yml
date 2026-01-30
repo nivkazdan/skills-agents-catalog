@@ -1,0 +1,90 @@
+name: Weekly Sync from Sources
+
+on:
+  schedule:
+    # Run every Sunday at 2:00 AM UTC
+    - cron: '0 2 * * 0'
+  workflow_dispatch:  # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Clone source repositories
+        run: |
+          mkdir -p sources
+
+          # Clone all source repos
+          repos=(
+            "nivkazdan/awesome-claude-code-subagents"
+            "nivkazdan/claude-code-plugins-plus-skills"
+            "nivkazdan/awesome-claude-skills"
+            "nivkazdan/superpowers"
+            "nivkazdan/claude-flow"
+            "nivkazdan/claude-code-heavy"
+            "nivkazdan/dev-browser"
+            "nivkazdan/Skill_Seekers"
+          )
+
+          for repo in "${repos[@]}"; do
+            name=$(echo "$repo" | cut -d'/' -f2)
+            echo "Cloning $name..."
+            git clone --depth 1 "https://github.com/$repo.git" "sources/$name" || true
+          done
+
+      - name: Run extraction script
+        run: |
+          chmod +x scripts/extract-and-organize.sh
+          ./scripts/extract-and-organize.sh
+
+      - name: Update verification timestamp
+        run: |
+          echo "" >> VERIFICATION.md
+          echo "---" >> VERIFICATION.md
+          echo "*Last synced: $(date -u '+%Y-%m-%d %H:%M:%S UTC')*" >> VERIFICATION.md
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git add -A
+          if git diff --staged --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.changes.outputs.has_changes == 'true'
+        run: |
+          git commit -m "chore: weekly sync from source repositories
+
+          Automated sync from:
+          - awesome-claude-code-subagents
+          - claude-code-plugins-plus-skills
+          - claude-flow
+          - superpowers
+          - dev-browser
+          - claude-code-heavy
+          - Skill_Seekers
+          - awesome-claude-skills
+
+          Synced: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+
+          git push origin main
+
+      - name: No changes detected
+        if: steps.changes.outputs.has_changes == 'false'
+        run: echo "No changes detected from source repositories"

@@ -1,0 +1,186 @@
+{
+  "target_categories": [
+    "research",
+    "investments",
+    "competitor-analysis",
+    "marketing",
+    "content",
+    "development",
+    "automation",
+    "data-analysis",
+    "security",
+    "collaboration",
+    "education"
+  ],
+  "keyword_mappings": {
+    "research": [
+      "research", "analyst", "analysis", "search", "explore", "investigate",
+      "data-researcher", "market-researcher", "research-analyst", "search-specialist",
+      "trend-analyst", "competitive-analyst", "web-search", "scrape", "crawl"
+    ],
+    "investments": [
+      "invest", "finance", "fintech", "trading", "portfolio", "quant", "risk",
+      "crypto", "defi", "yield", "staking", "arbitrage", "market", "price",
+      "wallet", "token", "blockchain", "payment", "financial", "tax",
+      "roi-calculator", "excel-analyst"
+    ],
+    "competitor-analysis": [
+      "competitive", "competitor", "market-research", "trend", "benchmark",
+      "analysis", "intelligence", "monitor", "tracker", "comparison"
+    ],
+    "marketing": [
+      "marketing", "content-marketer", "seo", "brand", "campaign", "social",
+      "email", "ads", "growth", "analytics", "conversion", "lead"
+    ],
+    "content": [
+      "content", "writer", "writing", "documentation", "docs", "readme",
+      "technical-writer", "api-documenter", "changelog", "release-notes",
+      "visual-content", "blog", "article"
+    ],
+    "development": [
+      "developer", "engineer", "architect", "coder", "programming", "code",
+      "frontend", "backend", "fullstack", "mobile", "web", "api", "database",
+      "devops", "infrastructure", "cloud", "kubernetes", "docker", "terraform",
+      "python", "javascript", "typescript", "react", "vue", "angular", "node",
+      "java", "golang", "rust", "swift", "kotlin", "php", "ruby", "rails",
+      "django", "laravel", "spring", "dotnet", "electron", "flutter",
+      "graphql", "rest", "grpc", "websocket", "microservices", "mcp"
+    ],
+    "automation": [
+      "automation", "workflow", "orchestrat", "pipeline", "ci-cd", "deploy",
+      "build", "script", "bot", "scheduler", "cron", "task", "n8n", "zapier",
+      "make", "agent", "swarm", "coordinator", "hook", "trigger"
+    ],
+    "data-analysis": [
+      "data", "analytics", "analysis", "ml", "ai", "machine-learning",
+      "deep-learning", "neural", "nlp", "computer-vision", "prediction",
+      "forecast", "model", "dataset", "preprocessing", "feature-engineering",
+      "visualization", "dashboard", "report", "metrics", "statistics"
+    ],
+    "security": [
+      "security", "audit", "penetration", "vulnerability", "compliance",
+      "encryption", "authentication", "authorization", "oauth", "jwt",
+      "injection", "xss", "csrf", "scanner", "hardening", "rbac", "iam",
+      "gdpr", "hipaa", "pci", "soc2", "iso27001", "forensics", "incident"
+    ],
+    "collaboration": [
+      "collaboration", "team", "project-manager", "scrum", "agile", "sprint",
+      "github", "git", "pr", "issue", "code-review", "slack", "communication",
+      "coordination", "sync", "multi-agent", "swarm"
+    ],
+    "education": [
+      "education", "tutorial", "learning", "training", "guide", "example",
+      "documentation", "onboarding", "skill", "teaching", "explanation"
+    ]
+  },
+  "source_category_mappings": {
+    "awesome-claude-code-subagents": {
+      "01-core-development": ["development"],
+      "02-language-specialists": ["development", "education"],
+      "03-infrastructure": ["development", "automation"],
+      "04-quality-security": ["security", "development"],
+      "05-data-ai": ["data-analysis", "development"],
+      "06-developer-experience": ["development", "automation", "collaboration"],
+      "07-specialized-domains": ["development", "investments"],
+      "08-business-product": ["marketing", "content", "collaboration"],
+      "09-meta-orchestration": ["automation", "collaboration"],
+      "10-research-analysis": ["research", "competitor-analysis", "data-analysis"]
+    },
+    "claude-code-plugins-plus-skills-plugins": {
+      "ai-agency": ["automation", "marketing"],
+      "ai-ml": ["data-analysis", "development"],
+      "api-development": ["development"],
+      "automation": ["automation"],
+      "business-tools": ["marketing", "investments"],
+      "community": ["collaboration", "development"],
+      "crypto": ["investments"],
+      "database": ["development", "data-analysis"],
+      "devops": ["development", "automation"],
+      "finance": ["investments", "data-analysis"],
+      "mcp": ["development", "automation"],
+      "performance": ["development", "data-analysis"],
+      "productivity": ["automation", "development"],
+      "security": ["security"],
+      "testing": ["development", "automation"],
+      "skill-enhancers": ["education", "automation"],
+      "saas-packs": ["automation", "development"],
+      "jeremy-genkit": ["development", "data-analysis"],
+      "jeremy-google-adk": ["development", "data-analysis"],
+      "jeremy-vertex-ai": ["development", "data-analysis"]
+    },
+    "claude-code-plugins-plus-skills-skills": {
+      "01-devops-basics": ["development", "automation", "education"],
+      "02-devops-advanced": ["development", "automation"],
+      "03-security-fundamentals": ["security", "education"],
+      "04-security-advanced": ["security"],
+      "05-frontend-dev": ["development"],
+      "06-backend-dev": ["development"],
+      "07-ml-training": ["data-analysis", "education"],
+      "08-ml-deployment": ["data-analysis", "automation"],
+      "09-test-automation": ["development", "automation"],
+      "10-performance-testing": ["development", "data-analysis"],
+      "11-data-pipelines": ["data-analysis", "automation"],
+      "12-data-analytics": ["data-analysis"],
+      "13-aws-skills": ["development", "automation"],
+      "14-gcp-skills": ["development", "automation"],
+      "15-api-development": ["development"],
+      "16-api-integration": ["development", "automation"],
+      "17-technical-docs": ["content", "education"],
+      "18-visual-content": ["content", "marketing"],
+      "19-business-automation": ["automation", "marketing"],
+      "20-enterprise-workflows": ["automation", "collaboration"]
+    },
+    "claude-flow": {
+      "analysis": ["data-analysis", "research"],
+      "architecture": ["development"],
+      "consensus": ["collaboration", "automation"],
+      "core": ["development", "automation"],
+      "custom": ["development"],
+      "data": ["data-analysis"],
+      "development": ["development"],
+      "devops": ["development", "automation"],
+      "documentation": ["content", "education"],
+      "flow-nexus": ["automation", "development"],
+      "github": ["collaboration", "development"],
+      "goal": ["automation"],
+      "hive-mind": ["collaboration", "automation"],
+      "neural": ["data-analysis"],
+      "optimization": ["development", "data-analysis"],
+      "payments": ["investments"],
+      "reasoning": ["data-analysis", "research"],
+      "sona": ["data-analysis"],
+      "sparc": ["development"],
+      "specialized": ["development"],
+      "sublinear": ["data-analysis", "development"],
+      "swarm": ["collaboration", "automation"],
+      "templates": ["development", "education"],
+      "testing": ["development"],
+      "v3": ["development", "automation"]
+    },
+    "superpowers": {
+      "brainstorming": ["research", "collaboration"],
+      "dispatching-parallel-agents": ["automation"],
+      "executing-plans": ["automation"],
+      "finishing-a-development-branch": ["development", "collaboration"],
+      "receiving-code-review": ["development", "collaboration"],
+      "requesting-code-review": ["development", "collaboration"],
+      "subagent-driven-development": ["development", "automation"],
+      "systematic-debugging": ["development", "education"],
+      "test-driven-development": ["development", "education"],
+      "using-git-worktrees": ["development"],
+      "using-superpowers": ["education"],
+      "verification-before-completion": ["development"],
+      "writing-plans": ["automation", "education"],
+      "writing-skills": ["education"]
+    },
+    "dev-browser": {
+      "default": ["automation", "development", "research"]
+    },
+    "claude-code-heavy": {
+      "default": ["research", "data-analysis", "automation"]
+    },
+    "Skill_Seekers": {
+      "default": ["development", "automation", "education"]
+    }
+  }
+}
