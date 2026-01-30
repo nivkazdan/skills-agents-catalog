@@ -1,13 +1,14 @@
 # collauoration Category
 
 ## Summary
-- **Agents**: 37
+- **Agents**: 38
 - **Skills**: 56
 - **Plugins**: 20
 - **Tools**: 0
-- **Total**: 113
+- **Total**: 114
 
 ## Agents
+- cf-agent-coordination
 - cf-code-review-swarm
 - cf-crdt-synchronizer
 - cf-github-modes

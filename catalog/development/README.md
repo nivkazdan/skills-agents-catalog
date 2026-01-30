@@ -1,11 +1,11 @@
 # development Category
 
 ## Summary
-- **Agents**: 123
+- **Agents**: 137
 - **Skills**: 240
 - **Plugins**: 187
 - **Tools**: 1
-- **Total**: 551
+- **Total**: 565
 
 ## Agents
 - accessibility-tester
@@ -18,6 +18,7 @@
 - backend-developer
 - blockchain-developer
 - build-engineer
+- cf-adr-architect
 - cf-analyze-code-quality
 - cf-app-store
 - cf-arch-system-design
@@ -31,23 +32,36 @@
 - cf-dev-backend-api
 - cf-docs-api-openapi
 - cf-goal-planner
+- cf-health
 - cf-implementer-sparc-coder
+- cf-list
 - cf-load-balancer
+- cf-logs
 - cf-matrix-optimizer
+- cf-memory-specialist
 - cf-migration-plan
 - cf-pagerank-analyzer
 - cf-performance-analyzer
+- cf-performance-engineer
 - cf-performance-optimizer
+- cf-pii-detector
 - cf-planner
+- cf-pool
 - cf-pseudocode
+- cf-reasoningbank-learner
 - cf-refinement
 - cf-release-manager
 - cf-repo-architect
 - cf-resource-allocator
 - cf-reviewer
 - cf-sandbox
+- cf-security-architect-aidefence
+- cf-security-architect
+- cf-spawn
 - cf-spec-mobile-react-native
 - cf-specification
+- cf-status
+- cf-stop
 - cf-test-long-runner
 - cf-tester
 - cf-topology-optimizer

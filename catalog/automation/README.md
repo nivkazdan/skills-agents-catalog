@@ -1,16 +1,20 @@
 # automation Category
 
 ## Summary
-- **Agents**: 45
+- **Agents**: 50
 - **Skills**: 96
 - **Plugins**: 42
 - **Tools**: 2
-- **Total**: 185
+- **Total**: 190
 
 ## Agents
 - agent-installer
 - agent-organizer
 - cf-adaptive-coordinator
+- cf-agent-capabilities
+- cf-agent-coordination
+- cf-agent-spawning
+- cf-agent-types
 - cf-agent
 - cf-agentic-payments
 - cf-automation-smart-agent
@@ -30,6 +34,7 @@
 - cf-raft-manager
 - cf-release-swarm
 - cf-sparc-coordinator
+- cf-sparc-orchestrator
 - cf-swarm-issue
 - cf-swarm-memory-manager
 - cf-swarm-pr

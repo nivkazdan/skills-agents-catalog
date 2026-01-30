@@ -18,16 +18,16 @@
 
 | Category | Agents | Skills | Plugins | Tools | Total |
 |----------|--------|--------|---------|-------|-------|
-| research | 12 | 8 | 8 | 1 | 29 |
+| research | 13 | 8 | 8 | 1 | 30 |
 | investments | 10 | 9 | 18 | 0 | 37 |
 | competitor-analysis | 7 | 7 | 10 | 0 | 24 |
 | marketing | 4 | 9 | 1 | 0 | 14 |
 | content | 5 | 33 | 7 | 0 | 45 |
-| development | 123 | 240 | 187 | 1 | 551 |
-| automation | 45 | 96 | 42 | 2 | 185 |
-| data-analysis | 16 | 108 | 72 | 1 | 197 |
-| security | 13 | 55 | 36 | 0 | 104 |
-| collaboration | 37 | 56 | 20 | 0 | 113 |
+| development | 137 | 240 | 187 | 1 | 565 |
+| automation | 50 | 96 | 42 | 2 | 190 |
+| data-analysis | 21 | 108 | 72 | 1 | 202 |
+| security | 17 | 55 | 36 | 0 | 108 |
+| collaboration | 38 | 56 | 20 | 0 | 114 |
 | education | 2 | 32 | 7 | 1 | 42 |
 
 ## Notes
@@ -45,4 +45,4 @@
 
 
 ---
-*Generated: Fri Jan 30 18:06:26 CET 2026*
+*Generated: Fri Jan 30 19:03:37 CET 2026*

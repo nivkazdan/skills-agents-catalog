@@ -1,14 +1,15 @@
 # research Category
 
 ## Summary
-- **Agents**: 12
+- **Agents**: 13
 - **Skills**: 8
 - **Plugins**: 8
 - **Tools**: 1
-- **Total**: 29
+- **Total**: 30
 
 ## Agents
 - business-analyst
+- cf-injection-analyst
 - cf-researcher
 - cf-scout-explorer
 - competitive-analyst

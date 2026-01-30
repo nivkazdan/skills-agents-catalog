@@ -1,18 +1,23 @@
 # data analysis Category
 
 ## Summary
-- **Agents**: 16
+- **Agents**: 21
 - **Skills**: 108
 - **Plugins**: 72
 - **Tools**: 1
-- **Total**: 197
+- **Total**: 202
 
 ## Agents
 - ai-engineer
 - blockchain-developer
+- cf-aidefence-guardian
+- cf-claims-authorizer
 - cf-data-ml-model
+- cf-ddd-domain-expert
+- cf-metrics
 - cf-neural-network
 - cf-safla-neural
+- cf-security-architect-aidefence
 - data-analyst
 - data-engineer
 - data-researcher

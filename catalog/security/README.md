@@ -1,15 +1,19 @@
 # security Category
 
 ## Summary
-- **Agents**: 13
+- **Agents**: 17
 - **Skills**: 55
 - **Plugins**: 36
 - **Tools**: 0
-- **Total**: 104
+- **Total**: 108
 
 ## Agents
 - ad-security-reviewer
 - cf-authentication
+- cf-injection-analyst
+- cf-security-architect-aidefence
+- cf-security-architect
+- cf-security-auditor
 - cf-security-manager
 - cf-v3-security-architect
 - compliance-auditor

@@ -64,7 +64,16 @@ clone_repo "awesome-claude-code-subagents" "nivkazdan/awesome-claude-code-subage
 clone_repo "claude-code-plugins-plus-skills" "nivkazdan/claude-code-plugins-plus-skills" "main"
 clone_repo "awesome-claude-skills" "nivkazdan/awesome-claude-skills" "main"
 clone_repo "superpowers" "nivkazdan/superpowers" "main"
-clone_repo "claude-flow" "nivkazdan/claude-flow" "main"
+# Full clone for claude-flow (has agents in multiple directories)
+if [ -d "$SOURCES_DIR/claude-flow" ]; then
+    echo -e "${BLUE}Updating claude-flow...${NC}"
+    cd "$SOURCES_DIR/claude-flow"
+    git pull --quiet 2>/dev/null || true
+    cd "$ROOT_DIR"
+else
+    echo -e "${GREEN}Cloning claude-flow (full clone)...${NC}"
+    git clone --quiet "https://github.com/nivkazdan/claude-flow.git" "$SOURCES_DIR/claude-flow" 2>/dev/null || true
+fi
 clone_repo "claude-code-heavy" "nivkazdan/claude-code-heavy" "main"
 clone_repo "dev-browser" "nivkazdan/dev-browser" "main"
 clone_repo "Skill_Seekers" "nivkazdan/Skill_Seekers" "development"
@@ -271,13 +280,41 @@ if [ -d "$SOURCES_DIR/claude-code-plugins-plus-skills/skills" ]; then
     echo -e "${GREEN}  Processed $skill_count skills${NC}"
 fi
 
-echo -e "\n${YELLOW}Processing claude-flow agents...${NC}"
+echo -e "\n${YELLOW}Processing claude-flow agents (all versions)...${NC}"
 
-if [ -d "$SOURCES_DIR/claude-flow/.claude/agents" ]; then
+if [ -d "$SOURCES_DIR/claude-flow" ]; then
     agent_count=0
-    find "$SOURCES_DIR/claude-flow/.claude/agents" -name "*.md" -type f | while read -r agent_file; do
+    processed_files=""
+    agent_list_file=$(mktemp)
+
+    # Find all agent directories and extract from each
+    agent_dirs=(
+        ".claude/agents"
+        "v2/.claude/agents"
+        "v3/@claude-flow/mcp/.claude/agents"
+        "v3/@claude-flow/cli/.claude/agents"
+        ".claude/commands/agents"
+        "v2/.claude/commands/agents"
+        "v3/@claude-flow/cli/.claude/commands/agents"
+    )
+
+    for agent_dir in "${agent_dirs[@]}"; do
+        full_path="$SOURCES_DIR/claude-flow/$agent_dir"
+        if [ -d "$full_path" ]; then
+            find "$full_path" -name "*.md" -type f >> "$agent_list_file"
+        fi
+    done
+
+    # Process all found agents, deduplicating by filename
+    while IFS= read -r agent_file; do
         filename=$(basename "$agent_file")
         if [ "$filename" != "README.md" ] && [ "$filename" != "MIGRATION_SUMMARY.md" ]; then
+            # Skip if we already processed this filename (dedup)
+            if echo "$processed_files" | grep -q "|$filename|"; then
+                continue
+            fi
+            processed_files="$processed_files|$filename|"
+
             parent_dir=$(basename "$(dirname "$agent_file")")
             categories=$(get_categories_for_item "$filename" "$parent_dir")
 
@@ -285,10 +322,12 @@ if [ -d "$SOURCES_DIR/claude-flow/.claude/agents" ]; then
                 target_dir="$CATALOG_DIR/$cat/agents"
                 cp "$agent_file" "$target_dir/cf-$filename" 2>/dev/null || true
             done
+            ((agent_count++)) || true
         fi
-    done
-    agent_count=$(find "$SOURCES_DIR/claude-flow/.claude/agents" -name "*.md" -type f ! -name "README.md" ! -name "MIGRATION_SUMMARY.md" 2>/dev/null | wc -l | tr -d ' ')
-    echo -e "${GREEN}  Processed $agent_count agents${NC}"
+    done < "$agent_list_file"
+
+    rm -f "$agent_list_file"
+    echo -e "${GREEN}  Processed $agent_count unique agents${NC}"
 fi
 
 echo -e "\n${YELLOW}Processing superpowers skills...${NC}"
