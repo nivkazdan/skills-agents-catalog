@@ -92,7 +92,7 @@ get_categories_for_item() {
     fi
 
     # Investments keywords
-    if echo "$lower_name" | grep -qE "(invest|finance|fintech|trading|portfolio|quant|risk|crypto|defi|yield|staking|arbitrage|market|price|wallet|token|blockchain|payment|financial|tax|roi|excel)"; then
+    if echo "$lower_name" | grep -qE "(invest|finance|fintech|trading|portfolio|quant|risk|crypto|defi|yield|staking|arbitrage|market|price|wallet|token|blockchain|payment|financial|tax|roi|excel|equity|stock|openbb|sec|10-k|valuation|dividend|macro|economist|options|hedge|fund|asset)"; then
         categories="$categories investments"
     fi
 
