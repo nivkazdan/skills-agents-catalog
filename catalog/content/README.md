@@ -1,4 +1,4 @@
-# content Category
+# Content Category
 
 ## Summary
 - **Agents**: 5

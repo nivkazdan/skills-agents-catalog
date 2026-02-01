@@ -1,4 +1,4 @@
-# education Category
+# Education Category
 
 ## Summary
 - **Agents**: 2

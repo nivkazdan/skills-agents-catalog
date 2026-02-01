@@ -1,4 +1,4 @@
-# competitor analysis Category
+# Competitor Analysis Category
 
 ## Summary
 - **Agents**: 7

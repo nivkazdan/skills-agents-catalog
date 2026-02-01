@@ -1,4 +1,4 @@
-# collauoration Category
+# Collaboration Category
 
 ## Summary
 - **Agents**: 38

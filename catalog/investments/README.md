@@ -1,49 +1,90 @@
-# investments Category
+# Investments Category
 
 ## Summary
-- **Agents**: 10
-- **Skills**: 9
-- **Plugins**: 18
+- **Agents**: 19
+- **Skills**: 27
+- **Plugins**: 32
 - **Tools**: 0
-- **Total**: 37
+- **Total**: 78
 
 ## Agents
+- ad-security-reviewer
 - blockchain-developer
 - cf-agentic-payments
 - cf-payments
+- cf-security-architect-aidefence
+- cf-security-architect
+- cf-security-auditor
+- cf-security-manager
 - cf-trading-predictor
+- cf-v3-security-architect
 - content-marketer
 - fintech-engineer
 - market-researcher
 - payment-integration
+- powershell-security-hardening
 - quant-analyst
 - risk-manager
+- security-auditor
+- security-engineer
 
 ## Skills
 - bearer-token-validator
+- cloud-security-posture
+- container-security-auditor
+- content-security-policy-generator
+- cookie-security-analyzer
 - definition-of-done-generator
 - ecs-task-definition-creator
+- env-secret-detector
 - excel-formula-generator
 - excel-macro-creator
+- http-header-security-audit
+- insecure-deserialization-checker
 - jwt-token-validator
 - kpi-definition-helper
+- kubernetes-secrets-manager
+- log-analysis-security
+- model-evaluation-metrics
 - model-quantization-tool
+- network-security-scanner
 - risk-assessment-creator
+- secret-scanner
+- security-benchmark-runner
+- security-group-generator
+- security-headers-generator
+- security-policy-generator
+- session-security-checker
+- vault-secrets-integrator
 
 ## Plugins
+- api-security-scanner
 - arbitrage-opportunity-finder
 - blockchain-explorer-cli
+- container-security-scanner
 - crypto-derivatives-tracker
 - crypto-news-aggregator
 - crypto-portfolio-tracker
 - crypto-signal-generator
 - crypto-tax-calculator
+- database-security-scanner
 - defi-yield-optimizer
 - excel-analyst-pro
 - market-movers-scanner
 - market-price-tracker
 - market-sentiment-analyzer
+- model-evaluation-suite
+- openbb-terminal
+- options-flow-analyzer
 - roi-calculator
+- secret-scanner
+- secrets-manager-integrator
+- security-audit-reporter
+- security-headers-analyzer
+- security-incident-responder
+- security-misconfiguration-finder
+- security-test-scanner
+- session-security-checker
 - staking-rewards-optimizer
 - token-launch-tracker
 - trading-strategy-backtester

@@ -1,4 +1,4 @@
-# data analysis Category
+# Data Analysis Category
 
 ## Summary
 - **Agents**: 21

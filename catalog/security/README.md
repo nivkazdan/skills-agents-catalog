@@ -1,4 +1,4 @@
-# security Category
+# Security Category
 
 ## Summary
 - **Agents**: 17

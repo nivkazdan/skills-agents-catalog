@@ -1,4 +1,4 @@
-# marketing Category
+# Marketing Category
 
 ## Summary
 - **Agents**: 4

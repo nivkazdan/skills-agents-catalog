@@ -1,4 +1,4 @@
-# research Category
+# Research Category
 
 ## Summary
 - **Agents**: 13

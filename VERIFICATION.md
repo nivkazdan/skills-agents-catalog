@@ -19,7 +19,7 @@
 | Category | Agents | Skills | Plugins | Tools | Total |
 |----------|--------|--------|---------|-------|-------|
 | research | 13 | 8 | 8 | 1 | 30 |
-| investments | 10 | 9 | 18 | 0 | 37 |
+| investments | 19 | 27 | 32 | 0 | 78 |
 | competitor-analysis | 7 | 7 | 10 | 0 | 24 |
 | marketing | 4 | 9 | 1 | 0 | 14 |
 | content | 5 | 33 | 7 | 0 | 45 |
@@ -45,4 +45,7 @@
 
 
 ---
-*Generated: Fri Jan 30 19:03:37 CET 2026*
+*Generated: Sun Feb  1 04:33:00 UTC 2026*
+
+---
+*Last synced: 2026-02-01 04:33:00 UTC*

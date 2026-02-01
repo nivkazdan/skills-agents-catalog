@@ -1,4 +1,4 @@
-# automation Category
+# Automation Category
 
 ## Summary
 - **Agents**: 50
